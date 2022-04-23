@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "人员信息登记";
+}
+
+
+<div class="row">
+    <div>
+        @using (Html.BeginForm("PersonnelAdd", "Home", FormMethod.Post))
+        {
+            <h1>人员信息登记</h1>
+            <br />
+            <div>
+                姓名：<input type="text" name="name" value="" class="form-control input-sm" />
+            </div>
+            <br />
+            <div>
+                性别：
+                <br />
+                <select name="gender" class="btn btn-default btn-lg dropdown-toggle">
+                    <option value="男" class="caret">男</option>
+                    <option value="女" class="caret">女</option>
+                </select>
+            </div>
+            <br />
+            <div>
+                年龄：<input type="number" name="age" value="" class="form-control input-sm" />
+            </div>
+            <br />
+            <div>
+                出生日期：<input type="text" name="birth" value="" class="form-control input-sm" />
+            </div>
+            <br />
+            <div>
+                手机：<input type="text" name="phone" value="" class="form-control input-sm" />
+            </div>
+            <br />
+            <div>
+                体温：<input type="number" name="body_temperature" value="" class="form-control input-sm" />
+            </div>
+            <br />
+            <div>
+                填表日期：<input type="text" name="date_filling" value="" class="form-control input-sm" />
+            </div>
+            <br />
+            <input type="submit" value="确认添加" class="btn btn-sm btn-info" />
+        }
+    </div>
+</div>
